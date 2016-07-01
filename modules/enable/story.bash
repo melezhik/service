@@ -9,8 +9,9 @@ debian)
   update-rc.d $service defaults || exit 1
   ;;
 centos)
-  chkconfig $service --add || exit 1
-  chkconfig $service on --level 2,3,5 || exit 1
+  chkconfig --add $service || exit 1
+  chkconfig --level 235 $service on || exit 1
+  chkconfig --list $service || exit 1
   ;;
 esac
 
