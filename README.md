@@ -2,6 +2,8 @@
 
 Manages Linux services.
 
+[![Build Status](https://travis-ci.org/melezhik/service.svg)](https://travis-ci.org/melezhik/service)
+
 * start
 * stop
 * enable
