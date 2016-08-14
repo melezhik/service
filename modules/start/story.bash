@@ -6,4 +6,4 @@ echo service: $service
 
 service $service start || exit 1
 
-echo done
+service $service status && echo "{$service}" running

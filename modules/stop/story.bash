@@ -6,4 +6,5 @@ echo service: $service
 
 service $service stop || exit 1
 
-echo done
+service $service status || echo "{$service}" stopped
+

@@ -1,2 +1,1 @@
-done
-
+generator: [ '{'.(config()->{service}).'} stopped' ]

@@ -1,0 +1,13 @@
+language: "perl"
+
+perl:
+  - "5.20"
+
+install:
+    - cpanm Sparrow
+    - sparrow index update
+    - sparrow plg install package-generic
+    - sparrow plg install service
+    - sparrow plg run package-generic --param list=nginx
+
+script: "sparrow plg run --param action=start --param service=nginx"
