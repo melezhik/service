@@ -8,6 +8,6 @@ install:
     - sparrow index update
     - sparrow plg install package-generic
     - sparrow plg install service
-    - sparrow plg run package-generic --param list=nginx
+    - sudo -E sparrow plg run package-generic --param list=nginx
 
 script: "sudo -E sparrow plg run --param action=start --param service=nginx"
