@@ -1,13 +1,15 @@
+sudo: required
+
 language: "perl"
 
 perl:
   - "5.20"
 
 install:
-    - cpanm Sparrow
-    - sparrow index update
-    - sparrow plg install package-generic
-    - sparrow plg install service
-    - sudo -E sparrow plg run package-generic --param list=nginx
+    - cpanm -S Sparrow
+    - sudo sparrow index update
+    - sudo sparrow plg install package-generic
+    - sudo sparrow plg install service
+    - sudo sparrow plg run package-generic --param list=nginx
 
-script: "sudo -E sparrow plg run --param action=start --param service=nginx"
+script: "sudo sparrow plg run --param action=start --param service=nginx"
