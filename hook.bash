@@ -1,6 +1,7 @@
 set_stdout OK
 
-os=`uname -a`
+os=`uname -a; cat /etc/issue; cat /etc/*-release`
+
 service=$(config service)
 
 set_stdout $os
