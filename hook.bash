@@ -9,6 +9,6 @@ if [[ $os =~ "debian" ]]; then
 elif [[ "$os" =~ "ubuntu" ]]; then
   run_story $(config action) os debian service $service
 elif [[ "$os" =~ "centos" ]]; then
-  run_story $(config action) os centos service $service
+  run_story $(config action) os $os service $service
 fi
 

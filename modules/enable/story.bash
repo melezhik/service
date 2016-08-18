@@ -8,10 +8,18 @@ case $os in
 debian)
   update-rc.d $service defaults || exit 1
   ;;
-centos)
+centos5)
   chkconfig --add $service || exit 1
   chkconfig --level 235 $service on || exit 1
   chkconfig --list $service || exit 1
+  ;;
+centos6)
+  chkconfig --add $service || exit 1
+  chkconfig --level 235 $service on || exit 1
+  chkconfig --list $service || exit 1
+  ;;
+centos7)
+  systemctl enable $service || exit 1
   ;;
 esac
 
