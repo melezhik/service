@@ -1,7 +1,5 @@
 set_stdout OK
 
-os=`uname -a; cat /etc/issue; cat /etc/*-release`
-
 service=$(config service)
 
 shopt -s nocasematch;
