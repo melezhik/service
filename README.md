@@ -1,9 +1,12 @@
-# SYNOSPIS
+# SYNOPSIS
 
 Manages Linux services.
 
+The list of supported actions:
+
 * start
 * stop
+* restart
 * enable
 * disable
 
@@ -22,20 +25,16 @@ For Debian, Ubuntu a `chkconfig` utility should be installed.
 ## Manually
 
 
-    $ sparrow plg run service --param action=start
-    $ sparrow plg run service --param action=enable
+    $ sparrow plg run service --param service=nginx --param action=enable
+    $ sparrow plg run service --param service=nginx --param action=start
+    $ sparrow plg run service --param service=nginx --param action=stop
     $ # so on ...
 
 
 ## Via Sparrowdo
 
-
     $ cat sparrowfile
 
-    use v6;
-    
-    use Sparrowdo;
-    
     task_run %(
       task => 'enable nginx service',
       plugin => 'service',
@@ -49,6 +48,17 @@ For Debian, Ubuntu a `chkconfig` utility should be installed.
     );
         
 
+# Parameters
+
+## service
+
+A servise name.
+
+
+## action
+
+One of five: `(enable|disable|start|stop|restart)`. Default value is `enable`. Should be set.
+
 # Platforms supported
 
 * Debian
@@ -57,6 +67,6 @@ For Debian, Ubuntu a `chkconfig` utility should be installed.
 
 # Author
 
-[Alexey Melzhik](mailto:melezhik@gmail.com)
+[Alexey Melezhik](mailto:melezhik@gmail.com)
 
 
