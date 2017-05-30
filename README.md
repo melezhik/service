@@ -12,7 +12,8 @@ The list of supported actions:
 
 # Prerequisites
 
-For Debian, Ubuntu a `chkconfig` utility should be installed.
+* For Debian, Ubuntu a `chkconfig` utility should be installed.
+* For Alpine linux a `openrc` should be installed.
 
 # INSTALL
 
