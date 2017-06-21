@@ -66,6 +66,7 @@ One of five: `(enable|disable|start|stop|restart)`. Default value is `enable`. S
 * Ubuntu
 * CentOS
 * Amazon Linux ( limited API, enable/disable actions are not yet supported )
+* Archlinux
 
 # Author
 

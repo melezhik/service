@@ -21,6 +21,9 @@ centos6)
 centos7)
   systemctl disable $service || exit 1
   ;;
+archlinux)
+  systemctl disable $service || exit 1
+  ;;
 alpine)
   rc-update del $service
   ;;

@@ -21,6 +21,9 @@ centos6)
 centos7)
   systemctl enable $service || exit 1
   ;;
+archlinux)
+  systemctl enable $service || exit 1
+  ;;
 alpine)
   rc-update add $service || exit 1
   ;;
