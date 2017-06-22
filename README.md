@@ -53,8 +53,7 @@ The list of supported actions:
 
 ## service
 
-A servise name.
-
+A service name.
 
 ## action
 
