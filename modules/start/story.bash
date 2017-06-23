@@ -10,7 +10,7 @@ archlinux)
     systemctl status $service && echo "{$service}" running
   ;;
 *) 
-    service $service start || exit 1
+  service $service start || exit 1
 	service $service status && echo "{$service}" running
   ;;
 esac
