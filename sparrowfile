@@ -2,7 +2,7 @@ my $service = 'nginx';
 
 set_spl %( service-dev => 'https://github.com/melezhik/service.git' );
 
-package-install 'nginx';
+package-install ('openssl','nginx');
 
 task-run 'disable $service service', 'service-dev', %(
   service => $service,

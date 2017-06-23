@@ -1,6 +1,6 @@
 {
   "name" : "service",
-  "version" : "0.1.7",
+  "version" : "0.1.8",
   "description" : "Manages Linux services",
   "url" : "https://github.com/melezhik/service"  
 }
