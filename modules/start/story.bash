@@ -4,6 +4,13 @@ service=$(story_var service)
 echo os: $os
 echo service: $service
 
-service $service start || exit 1
-
-service $service status && echo "{$service}" running
+case $os in 
+archlinux)
+    systemctl start $service || exit 1
+    systemctl status $service && echo "{$service}" running
+  ;;
+*) 
+    service $service start || exit 1
+	service $service status && echo "{$service}" running
+  ;;
+esac

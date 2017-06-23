@@ -53,8 +53,7 @@ The list of supported actions:
 
 ## service
 
-A servise name.
-
+A service name.
 
 ## action
 
@@ -66,6 +65,7 @@ One of five: `(enable|disable|start|stop|restart)`. Default value is `enable`. S
 * Ubuntu
 * CentOS
 * Amazon Linux ( limited API, enable/disable actions are not yet supported )
+* Archlinux
 
 # Author
 

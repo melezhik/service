@@ -1,0 +1,24 @@
+my $service = "sshd";
+
+set_spl %( dev-service => 'https://github.com/Spigell/service.git' );
+
+
+task-run "disable $service service", "dev-service", %(
+  service => "$service",
+  action  => 'disable',
+);
+
+task-run "stopping $service service", "dev-service", %(
+  service => "$service",
+  action  => "stop"
+);
+
+task-run "starting $service service", "dev-service", %(
+  service => "$service",
+  action  => "start"
+);
+
+task-run "enable $service service", "dev-service", %(
+  service => "$service",
+  action  => "enable"
+);
