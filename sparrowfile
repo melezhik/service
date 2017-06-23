@@ -1,24 +1,25 @@
-my $service = "sshd";
+my $service = 'nginx';
 
-set_spl %( dev-service => 'https://github.com/Spigell/service.git' );
+set_spl %( service-dev => 'https://github.com/melezhik/service.git' );
 
+package-install 'nginx';
 
-task-run "disable $service service", "dev-service", %(
-  service => "$service",
+task-run 'disable $service service', 'service-dev', %(
+  service => $service,
   action  => 'disable',
 );
 
-task-run "stopping $service service", "dev-service", %(
-  service => "$service",
-  action  => "stop"
+task-run 'stopping $service service', 'service-dev', %(
+  service => $service,
+  action  => 'stop'
 );
 
-task-run "starting $service service", "dev-service", %(
-  service => "$service",
-  action  => "start"
+task-run 'starting $service service', 'service-dev', %(
+  service => $service,
+  action  => 'start'
 );
 
-task-run "enable $service service", "dev-service", %(
-  service => "$service",
-  action  => "enable"
+task-run 'enable $service service', 'service-dev', %(
+  service => $service,
+  action  => 'enable'
 );
