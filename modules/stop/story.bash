@@ -10,6 +10,9 @@ archlinux)
     systemctl status $service 
     if [[ $? == 3 ]]; then echo " {$service} stopped" ; fi
   ;;
+centos7)
+    systemctl stop $service || exit 1
+    systemctl stop $service && echo "{$service}" running
 *) 
     service $service stop || exit 1
     service $service status || echo "{$service}" stopped
