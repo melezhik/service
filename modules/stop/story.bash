@@ -14,6 +14,9 @@ centos7)
     systemctl stop $service || exit 1
     systemctl stop $service && echo "{$service}" stopped
   ;;
+minoca)
+    /etc/init.d/$service stop && echo "{$service}" stopped
+  ;;
 *) 
     service $service stop || exit 1
     service $service status || echo "{$service}" stopped

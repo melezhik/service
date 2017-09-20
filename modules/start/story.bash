@@ -13,8 +13,11 @@ centos7)
     systemctl start $service || exit 1
     systemctl status $service && echo "{$service}" running
   ;;
+minoca)
+    /etc/init.d/$service start && echo "{$service}" running
+  ;;
 *) 
-  service $service start || exit 1
-	service $service status && echo "{$service}" running
+    service $service start || exit 1
+	  service $service status && echo "{$service}" running
   ;;
 esac
