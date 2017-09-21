@@ -8,6 +8,9 @@ case $os in
 debian)
   update-rc.d -f $service remove || exit 1
   ;;
+minoca)
+  update-rc.d -f $service remove || exit 1
+  ;;
 centos5)
   chkconfig --del $service || exit 1
   chkconfig --level 235 $service off || exit 1

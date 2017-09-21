@@ -8,6 +8,9 @@ case $os in
 debian)
   update-rc.d $service defaults || exit 1
   ;;
+minoca)
+  update-rc.d $service defaults || exit 1
+  ;;
 centos5)
   chkconfig --add $service || exit 1
   chkconfig --level 235 $service on || exit 1
