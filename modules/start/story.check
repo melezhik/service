@@ -1,9 +1,1 @@
-generator: <<CODE
-
-if ( os() =~ /minoca/ ){
-  [ 'regexp: Starting\s+'. (config()->{service}).'.*\sOK\s' ] 
-  } else {
-  [ '{'.(config()->{service}).'} running' ]
-}
-
-CODE
+generator: [ '{'.(config()->{service}).'} running' ]
