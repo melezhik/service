@@ -8,6 +8,9 @@ case $os in
 debian)
   update-rc.d $service defaults || exit 1
   ;;
+funtoo)
+  rc-update add $service defaults || exit 1
+  ;;
 minoca)
   update-rc.d $service defaults || exit 1
   ;;

@@ -16,6 +16,10 @@ centos7)
 minoca)
     /etc/init.d/$service start && echo "{$service}" running
   ;;
+funtoo) 
+    rc-service $service start || exit 1
+	  rc-service $service status && echo "{$service}" running
+  ;;
 *) 
     service $service start || exit 1
 	  service $service status && echo "{$service}" running

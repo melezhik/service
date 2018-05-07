@@ -14,6 +14,8 @@ elif [[ "$os" =~ "archlinux" ]]; then
   run_story $(config action) os $os service $service
 elif [[ "$os" =~ "minoca" ]]; then
   run_story $(config action) os $os service $service
+elif [[ "$os" =~ "funtoo" ]]; then
+  run_story $(config action) os $os service $service
 else
   echo "unknown os: $os"
   exit 1

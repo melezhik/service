@@ -13,7 +13,8 @@ The list of supported actions:
 # Prerequisites
 
 * For Debian, Ubuntu a `chkconfig` utility should be installed.
-* For Alpine linux a `openrc` should be installed.
+* For Alpine linux an `openrc` should be installed.
+* For Funtoo an `openrc` should be installed.
 
 # INSTALL
 
@@ -67,6 +68,7 @@ One of five: `(enable|disable|start|stop|restart)`. Default value is `enable`. S
 * Amazon Linux ( limited API, enable/disable actions are not yet supported )
 * Archlinux
 * Minoca
+* Funtoo
 
 # Author
 

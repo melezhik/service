@@ -8,6 +8,9 @@ case $os in
 debian)
   update-rc.d -f $service remove || exit 1
   ;;
+funtoo)
+  rc-update del $service defaults || exit 1
+  ;;
 minoca)
   update-rc.d -f $service remove || exit 1
   ;;

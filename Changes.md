@@ -1,3 +1,7 @@
+# 0.2.0
+
+Funtoo support - https://github.com/melezhik/service/issues/2
+
 # 0.1.15
 
 Fix for ocassional bug

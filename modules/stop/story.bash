@@ -17,6 +17,10 @@ centos7)
 minoca)
     /etc/init.d/$service stop && echo "{$service}" stopped
   ;;
+funtoo)
+    rc-service $service stop || exit 1
+    rc-service $service status || echo "{$service}" stopped
+  ;;
 *) 
     service $service stop || exit 1
     service $service status || echo "{$service}" stopped
